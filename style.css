@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /*   --clr-black: #1c1c1c;
+  --clr-gray: #ececec;
+  --clr-white: #f7f7f7;
+
+  --type-normal: #a8a878;
+  --type-fire: #f08030;
+  --type-water: #6890f0;
+  --type-grass: #78c850;
+  --type-electric: #f8d030;
+  --type-ice: #98d8d8;
+  --type-figthing: #c03028;
+  --type-poison: #a040a0;
+  --type-ground: #e0c068;
+  --type-flying: #a890f0;
+  --type-pyshic: #f85888;
+  --type-bug: #a8b820;
+  --type-rock: #b8a038;
+  --type-ghost: #705898;
+  --type-dark: #705848;
+  --type-dragon: #7038f8;
+  --type-steel: #b8b8d0;
+  --type-fairy: #f0b6bc;*/
+  --bg-black: #000000;
+  --bg-white: #ffffff;
+  --bg-gray: #707070;
+
+  --bg-yellow: #ffcc01;
+  --bg-blue: #164b8c;
+
+  --bg-normal: #9fa09f;
+  --bg-fire: #e62829;
+  --bg-water: #ebf4fa;
+  --bg-grass: #3f9b0b;
+  --bg-electric: #f9bf00;
+  --bg-ice: #368bc1;
+  --bg-figthing: #660000;
+  --bg-poison: #342d7e;
+  --bg-ground: #ffe87c;
+  --bg-flying: #ffe6e8;
+  --bg-physic: #342d7e;
+  --bg-bug: #7c9d8e;
+  --bg-rock: #e8e4c9;
+  --bg-ghost: #704170;
+  --bg-dark: #624d4e;
+  --bg-dragon: #6afb92;
+  --bg-steel: #71797e;
+  --bg-fairy: #d16587;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--bg-yellow);
+  font-family: Sour Gummy;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-white);
+}
+
+header {
+  padding-block: 1rem;
+  background-color: var(--bg-blue);
+  box-shadow: 0px 0px 9rem -1rem rgba(22, 75, 140, 0.7);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  padding-inline: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-inline: 1rem;
+}
+
+.btn-header {
+  background-color: var(--bg-gray);
+  padding: 0.5rem;
+  border-radius: 100vmax;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+}
+
+.btn-header:hover {
+  transform: scale(1, 1);
+  box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.5);
+}
+
+main {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pokemon-todos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 470px) {
+  .pokemon-todos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 700px) {
+  .pokemon-todos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pokemon {
+  border-radius: 3rem;
+  background-color: var(--bg-blue);
+  box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.25);
+  padding-block: 1rem;
+  text-transform: uppercase;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.pokemon-id-back {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 6rem;
+  font-weight: 800;
+  color: var(--bg-yellow);
+  z-index: -1;
+}
+
+.pokemon-imagen {
+  padding-inline: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.pokemon-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-inline: 1rem;
+  align-items: center;
+  text-align: center;
+}
+
+.nombre-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pokemon-id {
+  padding: 0.25rem 0.5rem;
+  border-radius: 10vmax;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.pokemon-nombre {
+  font-size: 1.4rem;
+}
+
+.pokemon-tipos {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tipo {
+  padding: 0.25rem 0.5rem;
+  border-radius: 100vmax;
+}
+
+.pokemon-stats {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+}
+
+.stat {
+  background-color: var(--bg-gray);
+  padding: 0.25rem 0.5rem;
+  border-radius: 100vmax;
+}
+
+.pokemon-imagen img {
+  width: 100%;
+  max-width: 6rem;
+}
+
+
+
+.normal {
+  background-color: var(--bg-normal);
+  color: var(--bg-black);
+}
+.fire {
+  background-color: var(--bg-fire);
+  color: var(--bg-black);
+}
+.water {
+  background-color: var(--bg-water);
+  color: var(--bg-black);
+}
+.grass {
+  background-color: var(--bg-grass);
+  color: var(--bg-black);
+}
+.electric {
+  background-color: var(--bg-electric);
+  color: var(--bg-black);
+}
+.ice {
+  background-color: var(--bg-ice);
+  color: var(--bg-black);
+}
+.figthing {
+  background-color: var(--bg-figthing);
+  color: var(--bg-white);
+}
+.poison {
+  background-color: var(--bg-poison);
+  color: var(--bg-white);
+}
+.ground {
+  background-color: var(--bg-ground);
+  color: var(--bg-black);
+}
+.flying {
+  background-color: var(--bg-flying);
+  color: var(--bg-black);
+}
+.pyshic {
+  background-color: var(--bg-pyshic);
+  color: var(--bg-black);
+}
+.bug {
+  background-color: var(--bg-bug);
+  color: var(--bg-black);
+}
+.rock {
+  background-color: var(--bg-rock);
+  color: var(--bg-black);
+}
+.ghost {
+  background-color: var(--bg-ghost);
+  color: var(--bg-white);
+}
+.dark {
+  background-color: var(--bg-dark);
+  color: var(--bg-white);
+}
+.dragon {
+  background-color: var(--bg-dragon);
+  color: var(--bg-black);
+}
+.steel {
+  background-color: var(--bg-steel);
+  color: var(--bg-white);
+}
+.fairy {
+  background-color: var(--bg-fairy);
+  color: var(--bg-black);
+}
+
+/* :root {
+  --bg-black: #000000;
+  --bg-white: #ffffff;
+  --bg-gray: #707070;
+
+  --bg-yellow: #ffcc01;
+  --bg-blue: #164b8c;
+
+  --bg-normal: #9fa09f;
+  --bg-fire: #e62829;
+  --bg-water: #ebf4fa;
+  --bg-grass: #3f9b0b;
+  --bg-electric: #f9bf00;
+  --bg-ice: #368bc1;
+  --bg-figthing: #660000;
+  --bg-poison: #342d7e;
+  --bg-ground: #ffe87c;
+  --bg-flying: #ffe6e8;
+  --bg-physic: #342d7e;
+  --bg-bug: #7c9d8e;
+  --bg-rock: #e8e4c9;
+  --bg-ghost: #704170;
+  --bg-dark: #624d4e;
+  --bg-dragon: #6afb92;
+  --bg-steel: #71797e;
+  --bg-fairy: #d16587;
+} */
